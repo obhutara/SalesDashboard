@@ -38,12 +38,12 @@ app.layout = html.Div([
         id='sales',
         figure=fig
     ),
-    html.H1("Select Date Range in months and Agents checkbox on Sales Bubble chart"),
+    html.H1("Select Date Range in months and Agents Checkbox"),
     dcc.DatePickerRange(
         id='date-picker-range',
         min_date_allowed=dt(2022, 1, 1),
         max_date_allowed=dt(2023, 4, 30),
-        start_date=dt(2022, 1, 1),
+        start_date=dt(2023, 4, 1),
         end_date=dt(2023, 4, 30)
     ),
     html.Div(children=[
@@ -185,26 +185,27 @@ def update_chart(start_date, end_date, agents):
     )
     return fig,table_with_footer
 
-def dataframe_to_excel(df):
-    output = io.BytesIO()
-    writer = pd.ExcelWriter(output, engine='xlsxwriter')
-    df.to_excel(writer, sheet_name='Sheet1', index=False)
-    writer.save()
-    xlsx_data = output.getvalue()
-    return base64.b64encode(xlsx_data).decode()
+#def dataframe_to_excel(df):
+#    output = io.BytesIO()
+#    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+#   df.to_excel(writer, sheet_name='Sheet1', index=False)
+#    writer.save()
+#    xlsx_data = output.getvalue()
+#    return base64.b64encode(xlsx_data).decode()
 
 @app.callback(
     Output('download_excel', 'data'),
     [Input('btn', 'n_clicks')],
     [State('table', 'data')]
 )
-def download_excel(n_clicks, table_data):
-    if n_clicks:
-        df = pd.DataFrame.from_records(table_data)
-        return dict(content=dataframe_to_excel(df), filename='download.xlsx',
-                    type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-
-
+#def download_excel(n_clicks, table_data):
+#    if n_clicks:
+#        df = pd.DataFrame.from_records(table_data)
+#        return dict(content=dataframe_to_excel(df), filename='download.xlsx',
+#                    type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+def download_data(n_clicks, table_data):
+    dff = pd.DataFrame(table_data)
+    return dcc.send_data_frame(dff.to_csv, "SalesFiltered.csv")
 
 
 
