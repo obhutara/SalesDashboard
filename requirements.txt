@@ -1,0 +1,6 @@
+dash==2.8.1
+pandas==1.4.4
+plotly==5.9.0
+XlsxWriter==3.0.3
+gunicorn
+dash-tools
