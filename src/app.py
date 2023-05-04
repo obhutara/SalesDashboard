@@ -11,7 +11,7 @@ from dash import dash_table
 import io
 import xlsxwriter
 import base64
-import dash_auth
+#import dash_auth
 
 app = Dash(__name__)
 server = app.server
