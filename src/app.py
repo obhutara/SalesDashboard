@@ -11,6 +11,7 @@ from dash import dash_table
 import io
 import xlsxwriter
 import base64
+import dash_auth
 
 app = Dash(__name__)
 server = app.server
@@ -28,12 +29,22 @@ df["Product"] = df["Product"].astype(str)
 download_button = html.Button("Download Excel file", id="btn", style={"marginTop": 20})
 download_component = dcc.Download(id="download_excel")
 
+#VALID_USERNAME_PASSWORD_PAIRS = {
+#    'omkar': 'omkar',
+#    'sandesh': 'sandesh'
+#}
+
 fig = px.scatter(df, x="mean_price", y="quantity",
                  size="total_sale_value", color="Product",
                  hover_name="Particulars", hover_data=['agent'],
                  log_x=False, log_y=True, size_max=70)
 fig.update_layout(xaxis_range=[0, 10000], yaxis_range=[0, 1000])
+
 app.layout = html.Div([
+    #dash_auth.BasicAuth(
+    #    app,
+    #    VALID_USERNAME_PASSWORD_PAIRS
+    #),
     dcc.Graph(
         id='sales',
         figure=fig
@@ -91,7 +102,6 @@ app.layout = html.Div([
     Input('date-picker-range', 'end_date'),
     Input('agents', 'value')
 )
-
 
 def update_chart(start_date, end_date, agents):
     filtered_df = df[(df['Date'] >= start_date) & (df['Date'] <= end_date) & (df['agent'].isin(agents))]
