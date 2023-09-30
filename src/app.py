@@ -53,9 +53,9 @@ app.layout = html.Div([
     dcc.DatePickerRange(
         id='date-picker-range',
         min_date_allowed=dt(2022, 1, 1),
-        max_date_allowed=dt(2023, 9, 20),
+        max_date_allowed=dt(2023, 9, 30),
         start_date=dt(2023, 9, 1),
-        end_date=dt(2023, 9, 20)
+        end_date=dt(2023, 9, 30)
     ),
     html.Div(children=[
         html.Label('Checkboxes'),
