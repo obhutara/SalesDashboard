@@ -15,7 +15,7 @@ import base64
 
 app = Dash(__name__)
 server = app.server
-app.title = "Sales Bubble Chart"
+app.title = "Rishi Minerals Sales"
 
 customers = pd.read_excel('customers.xlsx')
 df = pd.DataFrame(customers, columns=['Particulars','Product','total_sale_value','total_gst','gross_Total',
