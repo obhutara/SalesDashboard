@@ -20,7 +20,7 @@ app.title = "Rishi Minerals Sales"
 customers = pd.read_excel('customers.xlsx')
 df = pd.DataFrame(customers, columns=['Particulars','Product','total_sale_value','total_gst','gross_Total',
                                                          'quantity','mean_price','total_number_bills','agent','Date'])
-df = df.loc[df["mean_price"] <= 400000]
+df = df.loc[df["mean_price"] <= 15000]
 df["agent"] = df["agent"].astype(str)
 df['Date'] = pd.to_datetime(df['Date'])
 df["Particulars"] = df["Particulars"].astype(str)
