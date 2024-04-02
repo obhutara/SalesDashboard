@@ -178,6 +178,11 @@ def update_chart(start_date, end_date, agents):
                                                           log_x=False, log_y=True, size_max=70)
     fig.update_layout(xaxis_range=[0, 10000], yaxis_range=[0, 1000])
     fig.update_layout(uirevision='autoscale')
+    fig.update_layout(
+        margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
+        hovermode='closest',
+        uirevision='always'  # This ensures that user interactions like zooming are remembered across updates
+    )
     table_data = grouped_df.sort_values('quantity', ascending=False).to_dict('records')
     table = dash_table.DataTable(
         id='table',
