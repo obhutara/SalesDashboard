@@ -66,10 +66,9 @@ app.layout = html.Div([
                 {'label': 'Shresth Maheshwari', 'value': 'Shresth Maheshwari'},
                 {'label': 'Abhijit Maloo', 'value': 'Abhijit Maloo'},
                 {'label': 'Direct', 'value': 'Direct'},
-                {'label': 'Vishnu Kankani', 'value': 'Vishnu Kankani'},
-                {'label': 'Sharad Bhutra', 'value': 'Sharad Bhutra'}
+                {'label': 'Vishnu Kankani', 'value': 'Vishnu Kankani'}
     ],
-    value=['Sunil Rathi', 'Shresth Maheshwari', 'Abhijit Maloo', 'Direct', 'Vishnu Kankani','Sharad Bhutra']
+    value=['Sunil Rathi', 'Shresth Maheshwari', 'Abhijit Maloo', 'Direct', 'Vishnu Kankani']
                     )
     ]),
     html.Div(id='table-container', children=[
