@@ -54,7 +54,7 @@ app.layout = html.Div([
         id='date-picker-range',
         min_date_allowed=dt(2022, 1, 1),
         max_date_allowed=dt(2025, 7, 31),
-        start_date=dt(2025, 6, 1),
+        start_date=dt(2025, 7, 1),
         end_date=dt(2025, 7, 31)
     ),
     html.Div(children=[
