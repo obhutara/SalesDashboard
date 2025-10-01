@@ -20,7 +20,7 @@ app.title = "Rishi Minerals Sales"
 customers = pd.read_excel('customers.xlsx')
 df = pd.DataFrame(customers, columns=['Particulars','Product','total_sale_value','total_gst','gross_Total',
                                                          'quantity','mean_price','total_number_bills','agent','Date'])
-df = df.loc[df["mean_price"] <= 15000]
+df = df.loc[df["mean_price"] <= 25000]
 df["agent"] = df["agent"].astype(str)
 df['Date'] = pd.to_datetime(df['Date'])
 df["Particulars"] = df["Particulars"].astype(str)
@@ -54,7 +54,7 @@ app.layout = html.Div([
         id='date-picker-range',
         min_date_allowed=dt(2022, 1, 1),
         max_date_allowed=dt(2025, 9, 30),
-        start_date=dt(2025, 8, 1),
+        start_date=dt(2025, 9, 1),
         end_date=dt(2025, 9, 30)
     ),
     html.Div(children=[
