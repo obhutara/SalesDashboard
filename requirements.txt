@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Core App
 dash>=2.11.1
 pandas==1.3.5
@@ -44,3 +45,51 @@ tenacity>=6.2.0
 # Critical Fix for Render
 >>>>>>> 4bcc90baa916071386c5fd2313344222fd7ee972
 setuptools
+=======
+<<<<<<< HEAD
+# Core App
+dash>=2.11.1
+pandas==1.3.5
+plotly==5.9.0
+gunicorn
+
+# Components & UI
+dash-bootstrap-components
+dash-iconify==0.1.2
+dash-mantine-components==0.12.0
+visdcc==0.0.50
+
+# Data & Utilities
+XlsxWriter==3.0.3
+openpyxl
+python-dateutil>=2.8.1
+numpy==1.21.6
+pytz>=2020.1
+tenacity>=6.2.0
+
+# Critical Fix for Render
+=======
+# Core App
+dash>=2.11.1
+pandas==1.3.5
+plotly==5.9.0
+gunicorn
+
+# Components & UI
+dash-bootstrap-components
+dash-iconify==0.1.2
+dash-mantine-components==0.12.0
+visdcc==0.0.50
+
+# Data & Utilities
+XlsxWriter==3.0.3
+openpyxl
+python-dateutil>=2.8.1
+numpy==1.21.6
+pytz>=2020.1
+tenacity>=6.2.0
+
+# Critical Fix for Render
+>>>>>>> 4bcc90baa916071386c5fd2313344222fd7ee972
+setuptools
+>>>>>>> f81cf7129bc23482fe277c9e78c2142f071c3003
