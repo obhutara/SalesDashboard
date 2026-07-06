@@ -1,0 +1,68 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="dash" />
+          <option value="pandas" />
+          <option value="plotly" />
+          <option value="XlsxWriter" />
+          <option value="gunicorn" />
+          <option value="dash-tools" />
+          <option value="openpyxl" />
+          <option value="Flask" />
+          <option value="dash-table" />
+          <option value="dash-core-components" />
+          <option value="dash-html-components" />
+          <option value="python-dateutil" />
+          <option value="numpy" />
+          <option value="pytz" />
+          <option value="tenacity" />
+          <option value="packaging" />
+          <option value="dash-bootstrap-components" />
+          <option value="yolk3k" />
+          <option value="termcolor" />
+          <option value="ruamel.yaml" />
+          <option value="pipreqs" />
+          <option value="dash-iconify" />
+          <option value="dash-mantine-components" />
+          <option value="visdcc" />
+          <option value="pytest" />
+          <option value="pre-commit" />
+          <option value="setuptools" />
+          <option value="pyparsing" />
+          <option value="yarg" />
+          <option value="docopt" />
+          <option value="pyyaml" />
+          <option value="identify" />
+          <option value="nodeenv" />
+          <option value="cfgv" />
+          <option value="virtualenv" />
+          <option value="toml" />
+          <option value="py" />
+          <option value="attrs" />
+          <option value="pluggy" />
+          <option value="iniconfig" />
+          <option value="ruamel.yaml.clib" />
+          <option value="et-xmlfile" />
+          <option value="blinker" />
+          <option value="click" />
+          <option value="Werkzeug" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="MarkupSafe" />
+          <option value="six" />
+          <option value="platformdirs" />
+          <option value="filelock" />
+          <option value="distlib" />
+          <option value="requests" />
+          <option value="idna" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="urllib3" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
